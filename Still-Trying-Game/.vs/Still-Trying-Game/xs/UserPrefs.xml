@@ -1,15 +1,12 @@
 ﻿<Properties StartupConfiguration="{FC919677-3472-7971-292A-DD0D7C99CCAD}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Skripts/Movement.cs">
-    <Files>
-      <File FileName="Assets/Skripts/Movement.cs" Line="1" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Still-Trying-Game" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Skripts" expanded="True">
-                <Node name="Movement.cs" selected="True" />
+                <Node name="PlayerMovement.cs" selected="True" />
               </Node>
             </Node>
           </Node>
