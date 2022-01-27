@@ -4,22 +4,54 @@ using UnityEngine;
 
 public class WaypointFollower : MonoBehaviour
 {
-    [SerializeField] GameObject[] waypoints;
-    int currentWaypointIndex = 0;
+    //[SerializeField] private Transform[] _waypoints;
+    [SerializeField] private List<WaypointData> _waypointDataList = new List<WaypointData>();
+    private int _currentWaypointIndex = 0;
+    private float _targetDistance = 0.1f;
 
-    [SerializeField] float speed = 1f;
+    [SerializeField] private float _speed = 1f;
 
+    private float _timerCur = 0.0f;
+    [SerializeField] private float _timerReset = 1.0f;
+
+    private void Start()
+    {
+        _timerCur = _timerReset;
+    }
     void Update()
     {
-        if (Vector3.Distance(transform.position, waypoints[currentWaypointIndex]. transform.position) < .1f)
+        if (Vector3.Distance(transform.position, _waypointDataList[_currentWaypointIndex].waypointLocation.position) < _targetDistance)
         {
-            currentWaypointIndex++;
-            if (currentWaypointIndex >= waypoints.Length)
+            if (_timerCur >= 0)
             {
-                currentWaypointIndex = 0;
+                _timerCur -= Time.deltaTime;
+            }
+            else
+            {
+               
+                _currentWaypointIndex++;
+
+                if (_currentWaypointIndex >= _waypointDataList.Count)
+                {
+                    _currentWaypointIndex = 0;
+                }
+
+                _speed = _waypointDataList[_currentWaypointIndex].speedFromWaypoint;
+                _timerCur = _waypointDataList[_currentWaypointIndex].timeToWaitAtWaypoint;
             }
         }
-        transform.position = Vector3.MoveTowards
-            (transform.position, waypoints[currentWaypointIndex].transform.position, speed * Time.deltaTime);
+        else
+        {
+            transform.position = Vector3.MoveTowards(transform.position, _waypointDataList[_currentWaypointIndex].waypointLocation.position, _speed * Time.deltaTime);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, _waypointDataList[_currentWaypointIndex].waypointLocation.rotation, 720f * Time.deltaTime);
+        }
+    }
+
+    [System.Serializable]
+    public class WaypointData
+    {
+        public Transform waypointLocation;
+        public float speedFromWaypoint;
+        public float timeToWaitAtWaypoint;
     }
 }
