@@ -19,6 +19,7 @@ public class WaypointFollower : MonoBehaviour
                 currentWaypointIndex = 0;
             }
         }
-        transform.position = Vector3.MoveTowards(transform.position, waypoints[currentWaypointIndex].transform.position, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards
+            (transform.position, waypoints[currentWaypointIndex].transform.position, speed * Time.deltaTime);
     }
 }
