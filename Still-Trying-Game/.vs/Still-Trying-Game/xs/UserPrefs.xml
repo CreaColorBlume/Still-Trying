@@ -1,19 +1,17 @@
 ﻿<Properties StartupConfiguration="{FC919677-3472-7971-292A-DD0D7C99CCAD}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Skripts/PlayerLife.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Skripts/PlayerMovement.cs">
     <Files>
-      <File FileName="Assets/Skripts/PlayerMovement.cs" Line="36" Column="9" />
-      <File FileName="Assets/Skripts/WaypointFollower.cs" Line="55" Column="43" />
-      <File FileName="Assets/Skripts/StickyPlatform.cs" Line="12" Column="10" />
-      <File FileName="Assets/Skripts/PlayerLife.cs" Line="7" Column="5" />
+      <File FileName="Assets/Skripts/PlayerMovement.cs" Line="8" Column="36" />
+      <File FileName="Assets/Skripts/WaypointFollower.cs" />
+      <File FileName="Assets/Skripts/StickyPlatform.cs" />
+      <File FileName="Assets/Skripts/PlayerLife.cs" Line="27" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Still-Trying-Game" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Skripts" expanded="True">
-                <Node name="PlayerLife.cs" selected="True" />
-              </Node>
+            <Node name="Assets" expanded="True" selected="True">
+              <Node name="Skripts" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -22,7 +20,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6ccdde85-5c9b-4455-84ba-b9fb4e7c92a7" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ae011c08-67be-4cdb-846c-3812f8af53c4" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

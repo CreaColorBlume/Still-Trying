@@ -14,6 +14,8 @@ public class WaypointFollower : MonoBehaviour
     private float _timerCur = 0.0f;
     [SerializeField] private float _timerReset = 1.0f;
 
+    [SerializeField] private float _rotationSpeed;
+
     private void Start()
     {
         _timerCur = _timerReset;
@@ -43,7 +45,7 @@ public class WaypointFollower : MonoBehaviour
         else
         {
             transform.position = Vector3.MoveTowards(transform.position, _waypointDataList[_currentWaypointIndex].waypointLocation.position, _speed * Time.deltaTime);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, _waypointDataList[_currentWaypointIndex].waypointLocation.rotation, 720f * Time.deltaTime);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, _waypointDataList[_currentWaypointIndex].waypointLocation.rotation, _rotationSpeed * Time.deltaTime);
         }
     }
 
